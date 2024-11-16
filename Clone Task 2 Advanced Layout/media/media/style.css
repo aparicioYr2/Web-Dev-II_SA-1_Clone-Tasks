@@ -1,0 +1,305 @@
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap'); /*Teko; specified font for buttons and headings*/
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Teko:wght@300..700&display=swap');
+
+body {
+    margin: 0;
+} /*Set margin to 0 so that the navigation bar can fill the rest of the screen*/
+
+button {
+    font-size: 2em;
+    font-family: "Teko";
+    border-radius: 5%;
+} /*Sets font size to specifications;
+    sets font-family to specificiations;
+    sets border radius to 5% to match the wireframe*/
+
+h1 {
+    font-family: "Teko";
+} /*Sets font family to specifications*/
+
+p {
+    margin: 16px;
+} /*Sets margin to specifications*/
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    padding: 16px;
+    background-color: #4dccbd;
+    box-shadow: 0px 10px 0px 0px rgba(0, 0, 0, 0.5);
+    z-index: 1;
+} /*Display and Justify-content to spread out elements to specifications;
+    position set to sticky so it follows the viewport when scrolling down the page;
+    width set to 100% to fill the rest of the screen;
+    padding to give space between the elements to the background color;
+    background color set to specifications;
+    box-shadow to match wit the wireframe;
+    Z-index to make it mask all over the screen*/
+
+#nameHeader {
+    font-size: 3em;
+    margin: 0px;
+} /*Set heading size to specification*/
+
+.headerNav {
+    display: flex;
+    font-family: "Lato";
+    gap: 48px;
+} /*Gap adjustments set to large spacing desktop specifications*/
+
+#buttonHeader {
+    padding-left: 16px;
+    padding-right: 16px;
+} /*Padding adjustments set the button header to the right size*/
+
+.movieContents {
+    width: 900px;
+    margin: 16px auto; 
+} /*Set element width to specifications*/
+
+.movieContents img {
+    width: 100%;
+} /*Makes sure that the images are in the correct size to the width of the movieContents*/
+
+.movieOne, 
+.movieTwo, 
+.movieThree,
+.movieFour,
+.movieFive,
+.movieSix {
+    background-color: #231651;
+    color: white;
+    margin-top: 48px;
+    margin-bottom: 48px;
+    font-size: 1.5em;
+    font-family: "Lato";
+    box-shadow: 10px 10px 0px 0px rgba(0, 0, 0, 0.5);
+} /*Sets the background color to specificiations;
+    sets the text color to white for readability;
+    sets margins to large spacing desktop specificiations;
+    sets font size to specifications;
+    sets font family to specifications;
+    adds a box-shadow to match the wireframe*/
+
+.movieTwo button,
+.movieThree button,
+.movieFour button,
+.movieFive button,
+.movieSix button {
+    padding-left: 80px;
+    padding-right: 80px;
+    display: block;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    margin-left: 48px;
+    margin-right: 48px;
+} /*Adjusts padding to match the wireframe button size;
+    sets margin to small and large spacing specifications*/
+
+.movieOne img {
+    height: 350px;
+    object-fit: cover;
+} /*Adjusts image height to match the wireframe;
+    object-fit set to cover to maintain aspect ratio of the image*/
+
+.movieOne button {
+    padding: 16px;
+    margin: 16px;
+} /*Sets padding and margin to specified small spacing standards for desktop for button size adjustments*/
+
+.movieDescription {
+    display: flex;
+} /*Sets the paragraph and button to display flex so they can be inline with each other*/
+
+.movieTwo, .movieThree {
+    margin-top: 0px;
+    margin-bottom: 0px;
+} /*Removes the margins set by .movieContents*/
+
+.moviesTwoAndThree {
+    display: flex;
+    gap: 16px;
+} /*Sets movieTwo and movieThree into two columns via display flex;
+    sets gap to small spacing desktop specifications*/
+
+.movieFour,
+.movieFive,
+.movieSix {
+    column-count: 2;
+} /*Allows the images and the movie descriptions to be displayed in the same column*/
+
+
+
+
+@media screen and (min-width: 720px) and (max-width: 1024px) {
+    .headerNav {
+        gap: 32px;
+    } /*Gap adjustments set to large spacing tablet specifications*/
+
+    .movieContents {
+        width: 900px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px; 
+        align-items: stretch;
+    } /*Set element width to specifications*/
+
+    .movieContents > div,
+    .movieContents > section {
+        width: calc(50% - 16px);  
+    } /*Calculates the width needed to fit in correctly*/
+    
+    .movieOne, 
+    .movieTwo, 
+    .movieThree,
+    .movieFour,
+    .movieFive,
+    .movieSix {
+        background-color: #231651;
+        color: white;
+        margin-top: 32px;
+        margin-bottom: 32px;
+        font-size: 1.5em;
+        font-family: "Lato";
+        box-shadow: 10px 10px 0px 0px rgba(0, 0, 0, 0.5);
+        min-height: 800px;
+        max-height: 800px;
+    } /*Sets the background color to specificiations;
+    sets the text color to white for readability;
+    sets margins to large spacing tablet specificiations;
+    sets font size to specifications;
+    sets font family to specifications;
+    adds a box-shadow to match the wireframe*/
+    
+    .movieTwo button,
+    .movieThree button,
+    .movieFour button,
+    .movieFive button,
+    .movieSix button {
+        padding-left: 100px;
+        padding-right: 100px;
+        display: block;
+        margin-top: 16px;
+        margin-bottom: 16px;
+        margin-left: auto;
+        margin-right: auto;
+    } /*Adjusts padding to match the wireframe button size;
+    sets margin to small and large spacing specifications*/
+
+    .movieOne img {
+        height: auto;
+    } /*Adjusts image height to match the wireframe*/
+    
+    .movieOne button {
+        padding-left: 100px;
+        padding-right: 100px;
+        display: block;
+        margin-top: 16px;
+        margin-bottom: 16px;
+        margin-left: auto;
+        margin-right: auto;
+    } /*Sets padding and margin to specified small spacing standards;
+        changin the element to match with the other buttons*/
+    
+    .movieDescription {
+        display: block;
+    } /*Sets the paragraph and button back to display block so they don't go inline with each other*/
+    
+    .moviesTwoAndThree {
+        display: block;
+    } /*Sets it back to display block in favour of .movieContents being display flex*/
+
+    .movieFour,
+    .movieFive,
+    .movieSix {
+        column-count: 1;
+    } /*Sets the column count back to 1*/
+
+    .movieSix {
+        transform: translate(0em, -73.35em);
+    } /*Moves it to its designated row and column*/
+} /*Tablet dimensions*/
+
+
+
+@media screen and (max-width: 720px) {
+    #nameHeader {
+        font-size: 2em;
+    } /*Set heading size to mobile specification*/
+
+    .headerNav {
+        gap: 16px;
+    } /*Gap adjustments set to large spacing mobile specifications*/
+
+    .movieContents {
+        width: 600px;
+        margin: 16px auto; 
+    } /*Adjusts element width to fit with the viewport*/
+    
+    .movieOne, 
+    .movieTwo, 
+    .movieThree,
+    .movieFour,
+    .movieFive,
+    .movieSix {
+        background-color: #231651;
+        color: white;
+        margin-top: 16px;
+        margin-bottom: 16px;
+        font-size: 1.5em;
+        font-family: "Lato";
+        box-shadow: 10px 10px 0px 0px rgba(0, 0, 0, 0.5);
+    } /*Sets the background color to specificiations;
+    sets the text color to white for readability;
+    sets margins to large spacing tablet specificiations;
+    sets font size to specifications;
+    sets font family to specifications;
+    adds a box-shadow to match the wireframe*/
+    
+    .movieTwo button,
+    .movieThree button,
+    .movieFour button,
+    .movieFive button,
+    .movieSix button {
+        padding-left: 100px;
+        padding-right: 100px;
+        display: block;
+        margin-top: 16px;
+        margin-bottom: 16px;
+        margin-left: auto;
+        margin-right: auto;
+    } /*Adjusts padding to match the wireframe button size;
+        sets margin to small and large spacing specifications*/
+
+    .movieOne img {
+        height: auto;
+    } /*Adjusts image height to match the wireframe*/
+    
+    .movieOne button {
+        padding-left: 100px;
+        padding-right: 100px;
+        display: block;
+        margin-top: 16px;
+        margin-bottom: 16px;
+        margin-left: auto;
+        margin-right: auto;
+    } /*Sets padding and margin to specified small spacing standards;
+        changin the element to match with the other buttons*/
+    
+    .movieDescription {
+        display: block;
+    } /*Sets the paragraph and button back to display block so they don't go inline with each other*/
+    
+    .moviesTwoAndThree {
+        display: block;
+    } /*Sets it back to display block*/
+
+    .movieFour,
+    .movieFive,
+    .movieSix {
+        column-count: 1;
+    } /*Sets the column count back to 1*/
+} /*Mobile dimensions*/
