@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=Protest+Guerrilla&display=swap'); /*Heading font: Protest Guerilla*/
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap'); /*Text font: Josefin Sans*/
+
+body { 
+  background-color: #e9e9e9;
+  margin: 50px;
+  padding: 50px;
+  gap: 50px;
+} /*Setting background and standard spacing to specifications*/
+
+#logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
+  } /*Sets the logo's size, placing it on the centre*/
+
+  .navigation {
+    position: sticky;
+    top: 0;
+    text-align: center;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #e9e9e9;
+    z-index: 1;
+  } /*Sets the navigation's position on the page; 
+  using margins and paddings to space it properly with other elements; 
+  setting a z-index to prevent overlap with other elements*/
+
+  .navigation a {
+    margin-left: 5%;
+    margin-right: 5%;
+  } /*Margin adjustments*/
+
+  .main {
+    background-color: white;
+    margin: 10px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 40px;
+  } /*Margin and padding adjustments; 
+  making the main contents of the page be displayed in a white background colour*/
+
+  h1 {
+    font-size: 150px;
+    font-family: "Protest Guerrilla", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin: 0px;
+  } /*Sets h1 to specified font family and size*/
+
+  h2 {
+    font-size: 48px;
+    font-family: "Protest Guerrilla", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin-top: 0px;
+  } /*Sets font to specified font family and size*/
+
+  #subtitle {
+    margin: 4px;
+  } /*Margin adjustment to make it closer to the main heading*/
+
+  #description {
+    margin-bottom: 35px;
+  } /*Margin adjustment to further separate the contents of the page, improving readability*/
+
+  p {
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+  } /*Sets font to Josefin Sans*/
+
+  .contents {
+    column-count: 3;
+  } /*Clumps the three headings and paragraphs into 3 columns*/
+
+  .imagesMargin {
+    margin: -40px;
+    margin-top: 40px;
+  } /*Further separates the images to the content above*/
+
+  #mainPhoto {
+    width: 50%;
+    height: auto;
+    float: left;
+  } /*Turn the image into a float so that the rest of the images wrap around the main image*/
+
+  .images {
+    width: 25%;
+    float: right;
+  } /*Resizing to fit the wrap around*/
+
+  .author {
+    transform: translate(30%, 0px);
+    margin: 50px auto;
+    text-align: center;
+    display: inline-block;
+  } /*Margin adjustments*/
+
+  .authorText {
+    margin: 25px;
+    float: left;
+  } /*Changing the display to inline-block as an alternative to float*/
+
+  #authorParagraph {
+    text-align: left;
+  } /*Adding the author paragraph an id so that the class doesn't make the text align to center*/
+
+  #authorProfile {
+    width: 200px;
+    border-radius: 100%;
+  } /*Using transform to adjust it to the right position. 
+  Setting the photo to specified dimensions. 
+  Putting border radius to 100% to make the photo circular*/
+
+  .copyright {
+    text-align: center;
+    margin-top: 100px;
+    background-color: #14181d;
+    color: white;
+  } /*Margin adjustments;
+  setting backrground color specifications;
+  setting font color to white for better readability*/
+
+
+
+
+
+  @media screen and (max-width:1024px) {
+    body {
+      margin: 30px;
+      padding: 30px;
+      gap: 30px;
+    } /*Standard Tablet spacing*/
+
+    #logo {
+      width: 80px;
+    } /*Logo size adjustment to specification*/
+
+    h1 {
+      font-size: 48px;
+      text-align: center;
+    } /*Sets h1 to specified font family and size*/
+  
+    h2 {
+      font-size: 48px;
+      text-align: center;
+    } /*Sets font to specified font family and size*/
+
+    .contents {
+      column-count: 1;
+    } /*Makes sure that one colum of content is shown in the viewport instead of three*/
+
+    #mainPhoto {
+      display: none;
+    } /*Removes the main photo, only allowing 4 to display in the viewport*/
+
+    .images {
+      width: 50%;
+    } /*Resizing the images to fit with specified wireframe*/
+
+    .author {
+      transform: translate(0px, 0px);
+    }
+  } /*Tablet dimensions*/
+
+
+
+
+
+  @media screen and (max-width:720px) {
+    body {
+      margin: 20px;
+      padding: 20px;
+      gap: 20px;
+    } /*Standard Large Mobile spacing*/
+
+    #logo {
+      width: 80px;
+    } /*Logo size adjustment to specification*/
+
+    h1 {
+      font-size: 48px;
+      text-align: center;
+    } /*Sets h1 to specified font family and size*/
+  
+    h2 {
+      font-size: 48px;
+      text-align: center;
+    } /*Sets font to specified font family and size*/
+
+    .contents {
+      column-count: 1;
+    } /*Makes sure that one colum of content is shown in the viewport instead of three*/
+
+    #mainPhoto {
+      display: none;
+    } /*Removes the main photo, only allowing 4 to display in the viewport*/
+
+    .images {
+      float: none;
+      display: block;
+      width: 100%;
+    } /*Removes the float;
+    reverts to their original size*/
+
+    .author {
+      transform: translate(0px, 0px);
+    } /*Turns off any adjustments from translate beforehand*/
+
+    #authorParagraph {
+      text-align: center;
+    }
+  } /*Large Mobile dimensions*/
+
+
+
+  
+
+  @media screen and (max-width:540px) {
+    body {
+      margin: 12px;
+      padding: 12px;
+      gap: 12px;
+    } /*Standard Small Mobile spacing*/
+
+    #logo {
+      width: 80px;
+    } /*Logo size adjustment to specification*/
+
+    h1 {
+      font-size: 48px;
+      text-align: center;
+    } /*Sets h1 to specified font family and size*/
+  
+    h2 {
+      font-size: 48px;
+      text-align: center;
+    } /*Sets font to specified font family and size*/
+
+    .contents {
+      column-count: 1;
+    } /*Makes sure that one colum of content is shown in the viewport instead of three*/
+
+    #mainPhoto {
+      display: none;
+    } /*Removes the main photo, only allowing 4 to display in the viewport*/
+
+    .images {
+      float: none;
+      display: block;
+      width: 100%;
+    } /*Removes the float;
+    reverts to their original size*/
+
+    .author {
+      transform: translate(0px, 0px);
+    } /*Turns off any adjustments from translate beforehand*/
+
+    #authorParagraph {
+      text-align: center;
+    }
+  } /*Small Mobile dimensions*/
