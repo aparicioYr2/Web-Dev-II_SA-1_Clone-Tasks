@@ -1,0 +1,38 @@
+h1, p, button {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.cinema {
+    background-color: #5b0404;
+    color: white;
+    margin-top: 48px;
+    margin-bottom: 48px;
+    font-size: 2em;
+} /*Sets the background color to specificiations;
+    sets the text color to white for readability;
+    sets margins to large spacing desktop specificiations;
+    sets font size to specifications;
+    sets font family to specifications;
+    adds a box-shadow to match the wireframe*/
+
+.cinema button {
+    font-size: 1em;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+} /*Adding padding to size the button*/
+
+.cinema {
+    column-count: 2;
+} /*Allows the images and the movie descriptions to be displayed in the same column*/
+
+.cinema img {
+    height: auto;
+    max-width: 100%;
+} /*Adjusts image height to match the wireframe;
+    sets max-width to 100% to allow the image to scale to fit the column*/
+
+.info {
+    margin: 10px;
+} /*Margin adjustments*/

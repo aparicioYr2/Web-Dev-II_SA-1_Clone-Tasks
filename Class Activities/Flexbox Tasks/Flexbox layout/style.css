@@ -1,0 +1,24 @@
+body {
+    margin: 0;
+} /*Set body margin to 0 so that the navigation bar fills to the end of the screen*/
+
+.navigation {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff494;
+} /*Set display to flex so the elements can be aligned to the center;
+    Set padding to 20px so that the navigation bar is properly sized;
+    Set background color to a light yellow color*/
+
+.navLinks {
+    margin: auto;
+    display: flex;
+    gap: 50px;
+} /*Set display to flex so the elements can be evenly spread out by 50px*/
+
+a {
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+} /*Set font family to arial;
+    Set text decoration to none to remove the underline from the links*/
